@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary text-white">
+  <div class="container-fluid bg-dark bg-opacity-75 p-2">
+    <a class="navbar-brand text-white" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active text-white" [routerLink]="['pagea']"><i class="bi bi-music-note-beamed"> Musica</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['pageb']"><i class="bi bi-currency-exchange"> Divisa</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['pagec']"><i  class="bi bi-stars"> Horoscopo</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['page1']" target="_blank">Pagina <i class="bi bi-1-square"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['listaVideo']">Ver videos<i class="bi bi-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

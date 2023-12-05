@@ -1,0 +1,222 @@
+<div class="container text-center align-content-center mt-5 pt-3">
+    <div class="row">
+        <div class="col-md-8 d-none d-md-block border border-1 border-info overflow-x-hidden">
+          
+            <table class="table caption-top">
+                <caption class="text-center "><h4 class="text-white bg-primary bg-opacity-75 fw-bold pb-1">Conversor Divisa</h4></caption>
+
+                <thead class="text-center align-content-center">
+                      <th></th>
+                      <th scope="col" class="fw-normal">
+                        <img src="{{usd}}" class="img-thumbnail border-0" width="50px">
+                        <br> USD
+                        
+                      </th>
+                      <th scope="col" class="fw-normal">
+                        <img src="{{eur}}" class="img-thumbnail border-0" width="48px">
+                        <br> EUR
+                      
+                      </th>
+                      <th scope="col" class="fw-normal">
+                        <img src="{{gbp}}" class="img-thumbnail border-0" width="48px">
+                        <br>GBP
+                        
+                      </th>
+                      <th scope="col" class="fw-normal">
+                       <img src="{{jpy}}" class="shadow-sm img-thumbnail border-0" width="40px">
+                       <br>
+                       JPY
+                        
+                      </th>
+                      <th scope="col" class="fw-normal">
+                        <img src="{{ars}}" class="shadow-sm img-thumbnail border-0" width="40px">
+                        <br>ARS
+                      </th>
+                  </thead>
+                
+                <tbody>
+                  <tr>
+                    
+                    <th scope="row" class="fw-normal text-center d-lg-inline-flex justify-content-between align-content-between">
+                        <div><img src="{{usd}}" width="15px" height="13px"></div>
+                        <div>1 USD<br>
+                          Inverse</div>
+                    </th>
+                    
+                    <td>
+                      1.000000 <br>
+                      1.000000
+                    </td>
+                    <td class="text-primary">0.919901 <br>
+                      1.087074
+                    </td>
+                    <td class="text-primary">
+                      0.811469 <br>
+                      1.232332
+                    </td>
+                    <td class="text-primary">
+                      108.9079 <br>
+                      0.009182
+                    </td>
+
+                    <td class="text-primary">
+                      64.87725 <br>
+                      0.015414
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <th scope="row"class="fw-normal text-center d-lg-inline-flex justify-content-between align-content-between">
+                      <div><img src="{{eur}}" width="15px" height="13px"></div>
+                      <div> 1 EUR <br>
+                        Inverse</div>
+                    </th>
+                    <td class="text-primary">
+                      1.087074 <br>
+                      0.9119901
+                    </td>
+                    <td>
+                      1.000000 <br>
+                      1.000000
+                    </td>
+                    <td class="text-primary">
+                      0.882127 <br>
+                      1.133623
+                    </td>
+                    <td class="text-primary">
+                      118.3910 <br>
+                      0.008447
+                    </td>
+                    <td class="text-primary">
+                      70.52637 <br>
+                      0.014179
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="fw-normal text-center d-lg-inline-flex justify-content-between align-content-between">
+                      <div><img src="{{gbp}}" width="15px" height="13px"></div>
+                      <div>1 GBP <br>
+                        Inverse</div>
+                    </th>
+                    <td class="text-primary">
+                      1.087074 <br>
+                      0.9119901
+                    </td>
+                    <td class="text-primary">
+                      1.232543 <br>
+                      0.329743
+                    </td>
+                    <td>
+                      1.000000 <br>
+                      1.000000
+                    </td>
+                    <td class="text-primary">
+                      118.3910 <br>
+                      0.008447
+                    </td>
+                    <td class="text-primary">
+                      70.52637 <br>
+                      0.014179
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row" class="fw-normal text-center d-lg-inline-flex justify-content-between align-content-between">
+                      <div><img src="{{rub}}" width="15px" height="13px"></div>
+                      <div>1 RUB <br>
+                        Inverse</div>
+                    </th>
+                    <td class="text-primary">
+                      1.087074 <br>
+                      0.9119901
+                    </td>
+                    <td class="text-primary">
+                      1.004356<br>
+                      1.000673
+                    </td>
+                    <td class="text-primary">
+                      0.855427 <br>
+                      1.133623
+                    </td>
+                    <td class="text-primary">
+                      1.234934 <br>
+                      0.078229
+                    </td>
+                    <td class="text-primary">
+                      70.52637 <br>
+                      0.014179
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+
+        <!--FORMULARIO-->
+        <div class="col-md-4 col-sm-12 ps-3">
+          <form class="contenedorFormulario" #conversorForm="ngForm">
+            <div class="text-white tituloFormulario border-bottom border-2 border-white">
+              <h4>Conversor de Divisa</h4>
+            </div>
+            <div class="p-1">
+              <div class="mb-3">
+                <label for="cantidad" class="form-label text-white">Cantidad</label>
+                <input type="number" class="form-control text-end  rounded-0" id="cantidad" name="cantidad" placeholder="Cantidad" [(ngModel)]="valor" required #moneda="ngModel" verificar-Moneda>
+                <div *ngIf="moneda.invalid && (moneda.dirty || moneda.touched)" class="alert alert-danger">
+                  <div *ngIf="moneda.errors?.['required']">
+                    Debe ingresar un valor
+                  </div>
+                  <div *ngIf="moneda.errors?.['valorCorrecto']">
+                    Debe ingresar un valor mayor o igual a 1
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="monedaOrigen" class="form-label text-white">De</label>
+                <select id="monedaOrigen" name="monedaOrigen" class="text-center form-select rounded-0" [(ngModel)]="origen" required #valorOrigen="ngModel">
+                  <option selected disabled>Seleccione una Moneda</option>
+                  <option *ngFor="let m of simbolosDeMonedas" value="{{m.symbol}}">{{m.name}}</option>
+                  <!-- <option value="USD">USD D&oacute;lares EEUU</option>
+                  <option value="EUR">EUR Euro EU</option>
+                  <option value="GBP">GBP Libra Esterlina United Kingdom</option>
+                  <option value="RUB">RUB Rublo Ruso Russia</option>
+                  <option value="ARS">ARS Peso Argentino</option> -->
+                </select>
+                <div *ngIf="valorOrigen.invalid && (valorOrigen.dirty || valorOrigen.touched)" class="alert alert-danger">
+                  <div *ngIf="valorOrigen.errors?.['required']">
+                    Debe ingresar el origen de su moneda
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="monedaDestino" class="form-label text-white">A</label>
+                <select id="monedaDestino" name="monedaDestino" class="text-center form-select rounded-0" [(ngModel)]="destino" required #valorConvertir="ngModel">
+                  <option selected disabled>Seleccione una Moneda</option>
+                  <option *ngFor="let m of simbolosDeMonedas" value="{{m.symbol}}">{{m.name}}</option>
+                  <!-- <option value="USD">USD D&oacute;lares EEUU</option>
+                  <option value="EUR">EUR Euro EU</option>
+                  <option value="GBP">GBP Libra Esterlina United Kingdom</option>
+                  <option value="RUB">RUB Rublo Ruso Russia</option>
+                  <option value="ARS">ARS Peso Argentino</option> -->
+                </select>
+                <div *ngIf="valorConvertir.invalid && (valorConvertir.dirty || valorConvertir.touched)" class="alert alert-danger">
+                  <div *ngIf="valorConvertir.errors?.['required']">
+                    Debe ingresar a que moneda desea convertir
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <input type="search" class="form-control text-end pe-5 rounded-0" id="Cantidad" disabled value="{{resultado}}">
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="form-control bg-warning rounded-0" (click)="convertirMoneda()" [disabled]="!conversorForm.valid">Convertir<i class="bi bi-arrow-right-short text-white float-end"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+    </div> 
+</div>

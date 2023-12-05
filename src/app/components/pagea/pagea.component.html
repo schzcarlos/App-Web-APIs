@@ -1,0 +1,139 @@
+<div class="container-fluid p-5">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-12">
+            <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1">
+                <div class="col" *ngFor="let track of listTracks">
+                    <div class="card">
+                        <img src="{{track.picture_medium}}">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: {{track.name}}</h5>
+                            <p class="card-title">Canci&oacute;n: {{track.title}}</p>
+                            <p>&Aacute;lbum: {{track.titleAlbum}}</p>
+                            <p>Lanzamiento: {{track.release_date}}</p>
+                            <audio controls class="w-100">
+                                <source src="{{track.preview}}" type="audio/ogg" class="bg-primary">
+                            </audio>
+                        </div>          
+                    </div>
+                </div>
+
+                <!-- <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/FedYandel.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Artistas: Yandel & Feid</h5>
+                            <h5 class="card-title">Canci&oacute;n: Feid & Yandel</h5>
+                            <p>A&ntilde;o de lanzamiento: 2023</p>
+                            <p>&Aacute;lbum: Resistencia</p>
+                            <p>G&eacute;nero: Urbano latino</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/Quevedo.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: Quevedo</h5>
+                            <h5 class="card-title">Canci&oacute;n: Vista al Mar</h5>
+                            <p>A&ntilde;o de lanzamiento: 2023</p>
+                            <p>&Aacute;lbum: Donde quiero estar</p>
+                            <p>G&eacute;nero: Reggaeton</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/paulo.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: Paulo Londra</h5>
+                            <h5 class="card-title">Canci&oacute;n: Adan y Eva</h5>
+                            <p>A&ntilde;o de lanzamiento: 2019</p>
+                            <p>&Aacute;lbum: Homerum</p>
+                            <p>G&eacute;nero: Urbano latino, Pop, Hip-hop/rap</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/reikRusherking.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: Reik, Rusherking</h5>
+                            <h5 class="card-title">Canci&oacute;n: A Mi Lado</h5>
+                            <p>A&ntilde;o de lanzamiento: 2022</p>
+                            <p>&Aacute;lbum: A Mi Lado</p>
+                            <p>G&eacute;nero: Pop</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/LitKillaLuckra.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: Luck Ra, LIT killah</h5>
+                            <h5 class="card-title">Canci&oacute;n: CUENTAME</h5>
+                            <p>FechaA&ntilde;o de lanzamiento: 2023</p>
+                            <p>&Aacute;lbum: Cuentame</p>
+                            <p>G&eacute;nero: Urbano latino, Pop, Hip-hop/rap</p>
+                        </div>          
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/Luckra.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: La Konga, Luck Ra, Ke Personajes</h5>
+                            <h5 class="card-title">Canci&oacute;n: YA NO VUELVAS</h5>
+                            <p>A&ntilde;o de lanzamiento: 2023</p>
+                            <p>&Aacute;lbum: Ya No Vuelvas (Versión Cuarteto)</p>
+                            <p>G&eacute;nero: Cuarteto</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/MariaBecerra.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista: María Becerra</h5>
+                            <h5 class="card-title">Canci&oacute;n: LA NENA DE ARGENTINA</h5>
+                            <p>A&ntilde;o de lanzamiento: 2022</p>
+                            <p>&Aacute;lbum: La nena de Argentina</p>
+                            <p>G&eacute;nero: Reguetón, Cumbia, Bachata, trap latino, Pop latino, Dancehall pop</p>
+                        </div>          
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/Miloj.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Artista:  Milo j y Taiu</h5>
+                            <h5 class="card-title">Canci&oacute;n: Rara Vez</h5>
+                            <p>A&ntilde;o de lanzamiento: 2023</p>
+                            <p>&Aacute;lbum: Rara Vez</p>
+                            <p>G&eacute;nero: Urbano latino, Pop, Hip-hop/rap</p>
+                        </div>          
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+            <aside class="col-12">
+                <div class="col">
+                    <div class="card">
+                        <img src="../../assets/img/publicidad.png" height="100% ;">        
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+    </div>
+</div>
+
